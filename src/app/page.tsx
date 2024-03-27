@@ -12,8 +12,10 @@ export default function Home() {
     <main className="py-4">
       <MaxWidth>
         <div className="flex flex-col md:flex-row gap-y-5  justify-between md:items-center my-12">
-          <Search />
-          <Filter />
+          <Suspense>
+            <Search />
+            <Filter />
+          </Suspense>
         </div>
         <Suspense
           fallback={
